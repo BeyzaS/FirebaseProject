@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        tools:context=".DetailsLocation"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/details_of_the_house"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details_of_the_location"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/description_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/textColor"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/description_details_location"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:id="@+id/town_locationdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/town"
+            android:textColor="@color/textColor"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/town_details_location"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/textColor" />
+
+        <CheckBox android:id="@+id/hasswimmingpool_details_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColorHint="@color/textColor"
+            android:hint="@string/hasswimmingpool"
+            android:layout_marginTop="24dp"
+            android:onClick="onCheckBoxClickedSwimmingPool2"/>
+
+        <CheckBox
+            android:id="@+id/hascinema_details_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColorHint="@color/textColor"
+            android:hint="@string/hascinema"
+            android:onClick="onCheckBoxClickedCinema2"/>
+
+        <CheckBox android:id="@+id/hassportcenter_details_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColorHint="@color/textColor"
+            android:hint="@string/hassportcenter"
+            android:onClick="onCheckBoxClickedSportCenter2"
+            android:layout_marginBottom="24dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/buttonColor"
+                android:text="@string/save"
+                android:textColor="@color/backgroundColor"
+                android:onClick="savelocation"
+                android:layout_marginLeft="100dp" />
+
+            <Button
+                android:id="@+id/button_deleteuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@color/buttonColor"
+                android:text="@string/delete"
+                android:textColor="@color/backgroundColor"
+                android:onClick="deletelocation" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Navigation Drawer -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigationdrawer_detailslocation"
+        app:headerLayout="@layout/navigation_header"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        app:menu="@layout/navigation_item"
+        android:layout_gravity="start"
+        android:foregroundGravity="center"/>
+
+</android.support.v4.widget.DrawerLayout>

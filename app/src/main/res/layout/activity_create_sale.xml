@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        tools:context=".CreateSale"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/town_autocomplete"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <Button
+                android:id="@+id/createTown"
+                android:layout_width="90dp"
+                android:layout_height="45dp"
+                android:background="@color/buttonColor"
+                android:text="@string/new_town"
+                android:textColor="@color/backgroundColor"
+                android:layout_marginRight="8dp"
+                android:onClick="create_location" />
+
+            <Button
+                android:id="@+id/consultTown"
+                android:layout_width="90dp"
+                android:layout_height="45dp"
+                android:background="@color/buttonColor"
+                android:text="@string/all_towns"
+                android:textColor="@color/backgroundColor"
+                android:onClick="consult_all_town"
+                app:layout_constraintTop_toBottomOf="@+id/editText8"
+                tools:layout_editor_absoluteX="148dp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/description_create"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:hint="@string/description"
+            android:inputType="text|number|date"
+            android:textColor="@color/textColor" />
+
+        <Spinner
+            android:id="@+id/type_create"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/m2_create"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/m2"
+            android:textColor="@color/textColor"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/price_create"
+            android:layout_width="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/textColor"
+            android:hint="@string/price"
+            android:inputType="number"
+            android:layout_marginLeft="16dp" />
+
+        <EditText
+            android:id="@+id/address_create"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/address"
+            android:inputType="text"
+            android:textColor="@color/textColor" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="@color/buttonColor"
+            android:text="@string/create"
+            android:textColor="@color/backgroundColor"
+            android:onClick="create_house"
+            app:layout_constraintTop_toBottomOf="@+id/editText8"
+            tools:layout_editor_absoluteX="148dp" />
+
+    </LinearLayout>
+
+    <!-- Navigation Drawer -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigationdrawer_createsale"
+        app:headerLayout="@layout/navigation_header"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        app:menu="@layout/navigation_item"
+        android:layout_gravity="start"
+        android:foregroundGravity="center"/>
+
+</android.support.v4.widget.DrawerLayout>

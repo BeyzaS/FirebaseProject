@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        tools:context=".Languages"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/createlocation_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chooselanguages"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp" />
+
+            <ImageView
+                android:id="@+id/swiss"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/switzerlandflag" />
+
+            <ImageView
+                android:id="@+id/british"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/britishflag"/>
+
+            <ImageView
+                android:id="@+id/turkish"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/turkishflag"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Navigation Drawer -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigationdrawer_languages"
+        app:headerLayout="@layout/navigation_header"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        app:menu="@layout/navigation_item"
+        android:layout_gravity="start"
+        android:foregroundGravity="center"/>
+
+</android.support.v4.widget.DrawerLayout>

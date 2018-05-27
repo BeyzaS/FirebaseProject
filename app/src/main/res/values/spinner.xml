@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_array">
+        <item>Apartment</item>
+        <item>Building</item>
+        <item>Chalet</item>
+        <item>House</item>
+        <item>Studio</item>
+    </string-array>
+</resources>
